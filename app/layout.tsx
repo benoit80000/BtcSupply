@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://votre-app.vercel.app";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://btc-supply.vercel.app/";
 
 export const metadata: Metadata = {
   title: "Bitcoin Supply Tracker",
