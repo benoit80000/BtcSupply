@@ -97,3 +97,25 @@ export async function GET(req: NextRequest) {
         </div>
 
         {/* LIVE Badge */}
+        <div
+          style={{
+            background: "#ef4444",
+            padding: "15px 50px",
+            borderRadius: "30px",
+            fontSize: "32px",
+            fontWeight: "bold",
+            color: "white",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          🔴 LIVE
+        </div>
+      </div>
+    ),
+    {
+      width: 1200,
+      height: 1200,
+    }
+  );
+}
