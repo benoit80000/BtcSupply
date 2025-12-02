@@ -7,12 +7,12 @@ export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   let supply = searchParams.get("supply");
 
-  // Si pas de supply, récupérer en temps réel
+  // If no supply provided, fetch in real-time
   if (!supply) {
     try {
       const response = await fetch("https://blockchain.info/q/totalbc");
       const data = await response.text();
-      supply = (parseInt(data) / 100000000).toLocaleString("fr-FR", {
+      supply = (parseInt(data) / 100000000).toLocaleString("en-US", {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       });
@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
           fontFamily: "system-ui",
         }}
       >
-        {/* Cercle Bitcoin */}
+        {/* Bitcoin Circle */}
         <div
           style={{
             width: "280px",
@@ -51,7 +51,7 @@ export async function GET(req: NextRequest) {
           <span style={{ fontSize: "180px", color: "white" }}>₿</span>
         </div>
 
-        {/* Titre */}
+        {/* Title */}
         <h1
           style={{
             fontSize: "64px",
@@ -63,7 +63,7 @@ export async function GET(req: NextRequest) {
           Bitcoin Supply Tracker
         </h1>
 
-        {/* Ligne */}
+        {/* Line */}
         <div
           style={{
             width: "500px",
@@ -85,7 +85,7 @@ export async function GET(req: NextRequest) {
           {supply} BTC
         </div>
 
-        {/* Sous-titre */}
+        {/* Subtitle */}
         <div
           style={{
             fontSize: "36px",
@@ -93,29 +93,7 @@ export async function GET(req: NextRequest) {
             marginBottom: "60px",
           }}
         >
-          En circulation
+          In Circulation
         </div>
 
-        {/* Badge LIVE */}
-        <div
-          style={{
-            background: "#ef4444",
-            padding: "15px 50px",
-            borderRadius: "30px",
-            fontSize: "32px",
-            fontWeight: "bold",
-            color: "white",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          🔴 LIVE
-        </div>
-      </div>
-    ),
-    {
-      width: 1200,
-      height: 1200,
-    }
-  );
-}
+        {/* LIVE Badge */}
