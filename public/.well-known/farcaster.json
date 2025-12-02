@@ -1,4 +1,9 @@
 {
+  "accountAssociation": {
+    "header": "eyJmaWQiOjM2ODA3OCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweGM2MDQ5Qzk1ZmEwQzQ2ZDViMGU3YjE3MWMzZTQwNmJBQjdCZmQ2ZjcifQ",
+    "payload": "eyJkb21haW4iOiJidGMtc3VwcGx5LnZlcmNlbC5hcHAifQ",
+    "signature": "ZjhKDCbk1RYFurpww1CVBeUCx8/b3OK9EEhAiRVMQvA4GFJJrcLRCGkyf+CDrPHEEc7GP9DpF9N/nAsckM5n3Rs="
+  },
   "frame": {
     "name": "Bitcoin Supply Tracker",
     "version": "1",
