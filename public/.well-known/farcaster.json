@@ -1,0 +1,31 @@
+{
+  "frame": {
+    "name": "Bitcoin Supply Tracker",
+    "version": "1",
+    "iconUrl": "https://btc-supply.vercel.app/favicon.png",
+    "homeUrl": "https://btc-supply.vercel.app",
+    "imageUrl": "https://btc-supply.vercel.app/og-image.png",
+    "buttonTitle": "View Supply",
+    "splashImageUrl": "https://btc-supply.vercel.app/favicon.png",
+    "splashBackgroundColor": "#f97316",
+    "webhookUrl": "https://btc-supply.vercel.app/api/frame",
+    "description": "Track Bitcoin supply in real-time. Monitor the exact number of BTC in circulation, see mining progress, and discover how much Bitcoin remains to be mined. Live data updated every 30 seconds from blockchain.info API.",
+    "subtitle": "Real-time BTC circulation tracking",
+    "primaryCategory": "finance",
+    "screenshotUrls": [
+      "https://btc-supply.vercel.app/screenshot-1.png"
+    ],
+    "heroImageUrl": "https://btc-supply.vercel.app/banner.png",
+    "tags": [
+      "bitcoin"
+    ],
+    "tagline": "Know how much Bitcoin exists",
+    "ogTitle": "Real-time BTC Circulation",
+    "ogDescription": "Track the exact number of Bitcoin in circulation.",
+    "ogImageUrl": "https://btc-supply.vercel.app/og-image.png",
+    "castShareUrl": "https://btc-supply.vercel.app"
+    },
+  "baseBuilder": {
+    "ownerAddress": "0x603E8F80872E35e7ACBeE879aa79a5b51073AC75"
+  }
+}
