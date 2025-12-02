@@ -311,3 +311,182 @@ export default function BitcoinTracker() {
                     <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
                       <div style={{
                         width: "3rem",
+                        height: "3rem",
+                        background: "rgba(249, 115, 22, 0.2)",
+                        borderRadius: "0.75rem",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
+                      }}>
+                        <Target style={{ width: "1.5rem", height: "1.5rem", color: "#fb923c" }} />
+                      </div>
+                      <p style={{ color: "rgba(251, 146, 60, 0.7)", fontSize: "0.875rem", fontWeight: "500" }}>
+                        Max Supply
+                      </p>
+                    </div>
+                    <p style={{ fontSize: "1.875rem", fontWeight: "bold", color: "white" }}>
+                      {formatNumber(maxSupply)}
+                    </p>
+                    <p style={{ color: "rgba(251, 146, 60, 0.6)", fontSize: "0.875rem", marginTop: "0.25rem" }}>BTC</p>
+                  </div>
+
+                  <div style={{
+                    background: "rgba(255, 255, 255, 0.05)",
+                    backdropFilter: "blur(4px)",
+                    borderRadius: "1rem",
+                    padding: "1.5rem",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    transition: "all 0.3s",
+                    cursor: "pointer"
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "rgba(255, 255, 255, 0.1)"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)"}
+                  >
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
+                      <div style={{
+                        width: "3rem",
+                        height: "3rem",
+                        background: "rgba(245, 158, 11, 0.2)",
+                        borderRadius: "0.75rem",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
+                      }}>
+                        <Coins style={{ width: "1.5rem", height: "1.5rem", color: "#fbbf24" }} />
+                      </div>
+                      <p style={{ color: "rgba(251, 146, 60, 0.7)", fontSize: "0.875rem", fontWeight: "500" }}>
+                        Remaining to Mine
+                      </p>
+                    </div>
+                    <p style={{ fontSize: "1.875rem", fontWeight: "bold", color: "white" }}>
+                      {formatNumber(remaining)}
+                    </p>
+                    <p style={{ color: "rgba(251, 146, 60, 0.6)", fontSize: "0.875rem", marginTop: "0.25rem" }}>BTC</p>
+                  </div>
+
+                  <div style={{
+                    background: "rgba(255, 255, 255, 0.05)",
+                    backdropFilter: "blur(4px)",
+                    borderRadius: "1rem",
+                    padding: "1.5rem",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    transition: "all 0.3s",
+                    cursor: "pointer"
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = "rgba(255, 255, 255, 0.1)"}
+                  onMouseLeave={(e) => e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)"}
+                  >
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
+                      <div style={{
+                        width: "3rem",
+                        height: "3rem",
+                        background: "rgba(234, 179, 8, 0.2)",
+                        borderRadius: "0.75rem",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
+                      }}>
+                        <TrendingUp style={{ width: "1.5rem", height: "1.5rem", color: "#fde047" }} />
+                      </div>
+                      <p style={{ color: "rgba(251, 146, 60, 0.7)", fontSize: "0.875rem", fontWeight: "500" }}>
+                        Percentage Mined
+                      </p>
+                    </div>
+                    <p style={{ fontSize: "1.875rem", fontWeight: "bold", color: "white" }}>
+                      {percentageMined}%
+                    </p>
+                    <p style={{ color: "rgba(251, 146, 60, 0.6)", fontSize: "0.875rem", marginTop: "0.25rem" }}>of total</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                gap: "1rem",
+                background: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(16px)",
+                borderRadius: "1rem",
+                padding: "1.5rem",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                flexWrap: "wrap"
+              }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                  <div style={{
+                    width: "0.5rem",
+                    height: "0.5rem",
+                    background: "#4ade80",
+                    borderRadius: "50%",
+                    animation: "pulse 2s ease-in-out infinite"
+                  }}></div>
+                  <span style={{ color: "rgba(251, 146, 60, 0.8)", fontSize: "0.875rem" }}>
+                    Updated: {data.lastUpdate.toLocaleTimeString("en-US")}
+                  </span>
+                </div>
+                <button
+                  onClick={fetchBitcoinSupply}
+                  disabled={loading}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    padding: "0.75rem 1.5rem",
+                    background: "linear-gradient(to right, #f97316, #d97706)",
+                    color: "white",
+                    fontWeight: "600",
+                    borderRadius: "0.75rem",
+                    border: "none",
+                    cursor: loading ? "not-allowed" : "pointer",
+                    opacity: loading ? 0.5 : 1,
+                    transition: "all 0.3s",
+                    fontSize: "0.875rem"
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!loading) {
+                      e.currentTarget.style.transform = "scale(1.05)";
+                      e.currentTarget.style.boxShadow = "0 10px 15px -3px rgba(249, 115, 22, 0.5)";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
+                  <RefreshCw style={{
+                    width: "1.25rem",
+                    height: "1.25rem",
+                    animation: loading ? "spin 1s linear infinite" : "none"
+                  }} />
+                  Refresh
+                </button>
+              </div>
+            </div>
+          ) : null}
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.5;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
