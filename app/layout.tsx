@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://btc-supply.vercel.app/";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://btc-supply.vercel.app";
 
 export const metadata: Metadata = {
   title: "Bitcoin Supply Tracker",
@@ -35,7 +35,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className="m-0 p-0">{children}</body>
     </html>
   );
 }
