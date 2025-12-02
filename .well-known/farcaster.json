@@ -24,5 +24,8 @@
     "ogDescription": "Track the exact number of Bitcoin in circulation.",
     "ogImageUrl": "https://btc-supply.vercel.app/og-image.png",
     "castShareUrl": "https://btc-supply.vercel.app"
+    },
+  "baseBuilder": {
+    "ownerAddress": "0x603E8F80872E35e7ACBeE879aa79a5b51073AC75"
   }
 }
